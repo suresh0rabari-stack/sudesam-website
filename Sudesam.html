@@ -1,0 +1,1293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sudesam | Vita </title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+		
+		<style>
+		* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --green: #0d6b50;
+    --dark-green: #073e31;
+    --light-green: #eaf5ef;
+    --cream: #f7f5ed;
+    --yellow: #e6b84b;
+    --text: #18332b;
+    --muted: #6b7772;
+    --white: #ffffff;
+    --border: #dce5df;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    color: var(--text);
+    background: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* TOPBAR */
+
+.topbar {
+    background: var(--dark-green);
+    color: #fff;
+    padding: 10px 6%;
+    font-size: 13px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* NAVBAR */
+
+.navbar {
+    height: 78px;
+    padding: 0 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: var(--green);
+    font-weight: 500;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 35px;
+}
+
+.navbar nav a {
+    font-size: 15px;
+    color: #40524c;
+}
+
+.navbar nav a:hover {
+    color: var(--green);
+}
+
+.enquire-btn {
+    background: var(--green);
+    border: none;
+    color: white;
+    padding: 13px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 650px;
+    padding: 90px 7%;
+    background:
+        radial-gradient(
+            circle at 85% 40%,
+            #dcefe5,
+            transparent 35%
+        ),
+        var(--cream);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.eyebrow {
+    color: var(--green);
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1.7px;
+    font-weight: 700;
+}
+
+.hero h1 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(50px, 5.5vw, 80px);
+    line-height: 1.02;
+    margin: 20px 0;
+    color: var(--dark-green);
+}
+
+.hero h1 span {
+    color: var(--green);
+}
+
+.hero p {
+    color: var(--muted);
+    max-width: 570px;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.hero-buttons {
+    margin-top: 35px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.primary-btn,
+.secondary-btn {
+    display: inline-block;
+    padding: 15px 25px;
+    border-radius: 30px;
+    font-weight: 600;
+}
+
+.primary-btn {
+    background: var(--green);
+    color: white;
+}
+
+.secondary-btn {
+    border: 1px solid var(--green);
+    color: var(--green);
+}
+
+
+/* HERO PRODUCT */
+
+.hero-product {
+    height: 500px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-circle {
+    width: 420px;
+    height: 420px;
+    background: #d7ebdf;
+    border-radius: 50%;
+}
+
+.main-pack {
+    position: absolute;
+    width: 220px;
+    height: 310px;
+    border-radius: 18px;
+    background:
+        linear-gradient(
+            135deg,
+            #fff 0%,
+            #edf6f0 45%,
+            #d6eadf 100%
+        );
+    box-shadow: 20px 30px 60px rgba(0,0,0,.18);
+    transform: rotate(-7deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pack-label {
+    text-align: center;
+    border: 2px solid var(--green);
+    width: 85%;
+    padding: 30px 10px;
+    color: var(--green);
+}
+
+.pack-label small {
+    display: block;
+    font-size: 14px;
+}
+
+.pack-label strong {
+    display: block;
+    font-size: 36px;
+}
+
+.pack-label span {
+    display: block;
+    color: #d49b24;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.pack-label em {
+    display: block;
+    margin-top: 15px;
+    font-size: 11px;
+    font-style: normal;
+}
+
+.floating-card {
+    position: absolute;
+    padding: 16px 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 15px 40px rgba(0,0,0,.1);
+    font-size: 12px;
+}
+
+.card-one {
+    top: 70px;
+    right: 40px;
+}
+
+.card-two {
+    bottom: 70px;
+    left: 30px;
+}
+
+
+/* TRUST */
+
+.trust {
+    padding: 35px 7%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    background: var(--dark-green);
+    color: white;
+}
+
+.trust div {
+    padding: 15px 25px;
+    border-right: 1px solid rgba(255,255,255,.15);
+}
+
+.trust strong,
+.trust span {
+    display: block;
+}
+
+.trust strong {
+    font-size: 15px;
+}
+
+.trust span {
+    color: #a9c4ba;
+    margin-top: 6px;
+    font-size: 13px;
+}
+
+
+/* SECTIONS */
+
+.categories,
+.products-section {
+    padding: 100px 7%;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 45px;
+}
+
+.section-heading h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 48px;
+    color: var(--dark-green);
+    margin-top: 10px;
+}
+
+.section-heading a {
+    color: var(--green);
+    font-weight: 600;
+}
+
+
+/* CATEGORY */
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 15px;
+}
+
+.category {
+    padding: 25px 15px;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    transition: .3s;
+}
+
+.category:hover {
+    transform: translateY(-5px);
+    border-color: var(--green);
+    box-shadow: 0 15px 40px rgba(0,0,0,.06);
+}
+
+.category-icon {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.category h3 {
+    font-size: 15px;
+}
+
+.category p {
+    margin-top: 8px;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+
+/* FILTER */
+
+.filters {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.filter {
+    padding: 10px 18px;
+    border: 1px solid var(--border);
+    background: white;
+    border-radius: 25px;
+    cursor: pointer;
+    color: var(--text);
+}
+
+.filter.active,
+.filter:hover {
+    background: var(--green);
+    color: white;
+    border-color: var(--green);
+}
+
+
+/* PRODUCTS */
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.product-card {
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    overflow: hidden;
+    background: white;
+    transition: .3s;
+}
+
+.product-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 20px 50px rgba(0,0,0,.08);
+}
+
+.product-image {
+    height: 50%;
+    background: #f3f6f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+}
+
+.product-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.product-info {
+    padding: 22px;
+}
+
+.product-tag {
+    font-size: 11px;
+    color: var(--green);
+    font-weight: 700;
+}
+
+.product-info h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 24px;
+    margin: 8px 0;
+}
+
+.product-info p {
+    color: var(--muted);
+    line-height: 1.6;
+    font-size: 13px;
+    min-height: 65px;
+}
+
+.product-bottom {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-bottom span {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.product-bottom button {
+    border: none;
+    background: var(--green);
+    color: white;
+    padding: 9px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+
+/* QUALITY */
+
+.quality {
+    padding: 100px 7%;
+    background: var(--cream);
+}
+
+.quality-content {
+    max-width: 800px;
+}
+
+.quality h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 55px;
+    color: var(--dark-green);
+    margin: 15px 0;
+}
+
+.quality p {
+    color: var(--muted);
+    line-height: 1.8;
+}
+
+.quality-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 40px;
+    gap: 20px;
+}
+
+.quality-list div {
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
+}
+
+.quality-list strong,
+.quality-list span {
+    display: block;
+}
+
+.quality-list span {
+    color: var(--muted);
+    margin-top: 7px;
+    font-size: 13px;
+}
+
+
+/* DISTRIBUTOR */
+
+.distributor {
+    margin: 80px 7%;
+    padding: 80px;
+    border-radius: 30px;
+    background: var(--dark-green);
+    color: white;
+}
+
+.distributor h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 52px;
+    margin: 15px 0;
+}
+
+.distributor p {
+    max-width: 600px;
+    color: #b9d0c7;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+
+/* FOOTER */
+
+footer {
+    background: #061e18;
+    color: white;
+    padding: 70px 7% 20px;
+}
+
+.footer-main {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 2fr;
+    gap: 50px;
+}
+
+.footer-brand p {
+    margin-top: 20px;
+    color: #9ab2aa;
+    max-width: 300px;
+    line-height: 1.7;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+    margin-bottom: 20px;
+}
+
+.footer-links a,
+.footer-contact a {
+    display: block;
+    color: #9ab2aa;
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.footer-contact p {
+    color: #9ab2aa;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+.copyright {
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,.1);
+    color: #78928a;
+    font-size: 12px;
+}
+
+
+/* WHATSAPP */
+
+.whatsapp {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    background: #25D366;
+    color: white;
+    padding: 14px 22px;
+    border-radius: 30px;
+    font-weight: 700;
+    z-index: 90;
+}
+
+
+/* MODAL */
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.55);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-box {
+    background: white;
+    width: 100%;
+    max-width: 480px;
+    padding: 35px;
+    border-radius: 25px;
+    position: relative;
+}
+
+.modal-box h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 35px;
+    color: var(--dark-green);
+}
+
+.modal-box p {
+    color: var(--muted);
+    margin: 10px 0 25px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    border: none;
+    background: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.modal form input,
+.modal form textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 12px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    font-family: inherit;
+}
+
+.modal textarea {
+    height: 100px;
+    resize: none;
+}
+
+.modal form button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    background: var(--green);
+    color: white;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-content {
+        margin: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .category-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .trust {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .topbar {
+        display: none;
+    }
+
+    .navbar {
+        height: 65px;
+    }
+
+    .navbar nav {
+        display: none;
+    }
+
+    .hero {
+        padding: 60px 5%;
+    }
+
+    .hero h1 {
+        font-size: 47px;
+    }
+
+    .hero-product {
+        height: 400px;
+    }
+
+    .product-circle {
+        width: 300px;
+        height: 300px;
+    }
+
+    .main-pack {
+        width: 170px;
+        height: 240px;
+    }
+
+    .category-grid,
+    .product-grid,
+    .quality-list,
+    .trust {
+        grid-template-columns: 1fr;
+    }
+
+    .categories,
+    .products-section,
+    .quality {
+        padding: 70px 5%;
+    }
+
+    .section-heading {
+        display: block;
+    }
+
+    .section-heading h2,
+    .quality h2,
+    .distributor h2 {
+        font-size: 38px;
+    }
+
+    .section-heading a {
+        display: block;
+        margin-top: 15px;
+    }
+
+    .distributor {
+        margin: 50px 5%;
+        padding: 45px 25px;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr;
+    }
+
+}
+		</style>
+		
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+   Sudesham Healthcare: Global Quality Standards for Trusted Human Health Care <span>Talk to us: +91 7285020211</span>
+</div>
+
+
+<!-- NAVBAR -->
+<header class="navbar">
+
+    <a href="#" class="logo">
+        SUDESAM<span>HEALTHCARE</span>
+    </a>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#products">Store</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+</header>
+
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <div class="eyebrow">
+            Sudesham Healthcare: Global Quality Standards for Trusted Human Health Care
+        </div>
+
+        <h1>
+            Advance Human
+            <span>Health Care</span>
+            Company, Proven
+            in the Field.
+        </h1>
+
+        <p>
+            "Good health begins with complete nutrition. - prevent them by giving your body the premium nourishment it deserves."
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#products" class="primary-btn">
+                View Our Products
+            </a>
+
+            <a
+                href="https://wa.me/7285020211"
+                class="secondary-btn"
+                target="_blank">
+                Talk to us on WhatsApp
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-product">
+
+        <div class="product-circle"></div>
+
+        <div class="floating-card card-one">
+            WHO-GMP<br>
+            <strong>Certified</strong>
+        </div>
+
+        <div class="floating-card card-two">
+            ISO 9001:2015<br>
+            <strong>Quality</strong>
+        </div>
+
+        <div class="main-pack">
+            <div class="pack-label">
+                <small>SUDESAM</small>
+                <strong>VITA</strong>
+                <em>Health Care</em>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- TRUST -->
+<section class="trust">
+
+    <div>
+        <strong>WHO-GMP</strong>
+        <span>Certified Quality</span>
+    </div>
+
+    <div>
+        <strong>Best Quality</strong>
+        <span>Support Strong Bones & Helps Boost Immunity </span>
+    </div>
+
+    <div>
+        <strong>Clinically Tested</strong>
+        <span>Science-backed formulas</span>
+    </div>
+
+    <div>
+        <strong> Research Driven </strong>
+        <span> Developed with science and precision </span>
+    </div>
+
+</section>
+
+
+<!-- CATEGORIES -->
+<!-- <section class="categories">
+
+    <div class="section-heading">
+        <div>
+            <span class="eyebrow">OUR RANGE</span>
+            <h2>Our range in animal</h2>
+        </div>
+
+        <a href="#products">See all products →</a>
+    </div>
+
+
+    <div class="category-grid">
+
+        <div class="category">
+            <div class="category-icon">🐄</div>
+            <h3>Cattle & Buffalo</h3>
+            <p>Calcium · Liver · Udder</p>
+        </div>
+
+        <div class="category">
+            <div class="category-icon">🐕</div>
+            <h3>Dogs & Cats</h3>
+            <p>Liver care</p>
+        </div>
+
+        <div class="category">
+            <div class="category-icon">🐔</div>
+            <h3>Poultry</h3>
+            <p>Vitamins · Selenium</p>
+        </div>
+
+        <div class="category">
+            <div class="category-icon">🐎</div>
+            <h3>Equine</h3>
+            <p>Horses · Working animals</p>
+        </div>
+
+        <div class="category">
+            <div class="category-icon">🌿</div>
+            <h3>Wellness</h3>
+            <p>Juices · Drops</p>
+        </div>
+
+        <div class="category">
+            <div class="category-icon">🌸</div>
+            <h3>Women Care</h3>
+            <p>Reproductive health</p>
+        </div>
+
+    </div>
+
+</section> -->
+
+
+<!-- PRODUCTS -->
+<section class="products-section" id="products">
+
+    <div class="section-heading">
+
+        <div>
+            <span class="eyebrow">OUR PRODUCTS</span>
+            <h2>Science-backed solutions</h2>
+        </div>
+
+        <span class="product-count">
+            Showing all products
+        </span>
+
+    </div>
+
+
+    <!-- FILTERS -->
+    <div class="filters">
+
+        <button class="filter active" data-filter="all">
+            All
+        </button>
+
+        <button class="filter" data-filter="cattle">
+           Sudesam Vita
+        </button>
+
+        <button class="filter" data-filter="pets">
+           Sudesical
+        </button>
+
+    </div>
+
+
+    <!-- PRODUCT GRID -->
+    <div class="product-grid">
+
+
+        <!-- PRODUCT -->
+        <article class="product-card" data-category="wellness">
+
+            <div class="product-image">
+                <img src="C:\Users\INDIA\Downloads\Sudesam/Sudesamvitamulti.jpeg" alt = "Sudesam Vita">
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-tag">
+                    MULTIVITAMIN SYRUP
+                </span>
+
+                <h3>SUDESAM VITA</h3>
+
+                <p>
+                    Helps Boost Immunity Energy & Vitality
+		</p>
+
+                <div class="product-bottom">
+                    <span>200 ml</span>
+
+                    <button onclick="openEnquiry('Aloe Vera Juice')">
+                        Enquire
+                    </button>
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PRODUCT -->
+        <article class="product-card" data-category="wellness">
+
+            <div class="product-image">
+                <img src="C:\Users\INDIA\Downloads\Sudesam/sudesical syrup.jpg" alt="Sudesical Syrup">
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-tag">
+                    CALCIUM
+ 		</span>
+
+                <h3>SUDESICAL</h3>
+
+                <p> Stronger Bones, Healthier Body, for Every Family.
+                                    </p>
+
+                <div class="product-bottom">
+                    <span>200 ml</span>
+
+                    <button onclick="openEnquiry('Amla Juice')">
+                        Enquire
+                    </button>
+                </div>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- QUALITY 
+<section class="quality" id="about">
+
+    <div class="quality-content">
+
+        <span class="eyebrow">QUALITY YOU CAN CHECK</span>
+
+        <h2>
+            Manufactured to
+            recognised standards.
+        </h2>
+
+        <p>
+            Our products are manufactured at certified
+            partner facilities following recognised
+            pharmaceutical quality systems.
+        </p>
+
+        <div class="quality-list">
+
+            <div>
+                <strong>WHO-GMP</strong>
+                <span>Certified manufacturing plants</span>
+            </div>
+
+            <div>
+                <strong>ISO 9001:2015</strong>
+                <span>Quality management system</span>
+            </div>
+
+            <div>
+                <strong>FSSAI</strong>
+                <span>Licensed wellness range</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section> -->
+
+
+<!-- DISTRIBUTOR -->
+<section class="distributor">
+
+    <div>
+
+        <span class="eyebrow">PARTNER WITH US</span>
+
+        <h2>Become a Sudesam Distributor</h2>
+
+        <p>
+            We supply stockists and Human's Healthcare.
+            Send us your district and our team will contact you.
+        </p>
+
+        <a
+            href="https://wa.me/917285020211"
+            target="_blank"
+            class="primary-btn">
+            Apply on WhatsApp
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer id="contact">
+
+    <div class="footer-main">
+
+        <div class="footer-brand">
+
+            <div class="logo">
+                SUDESAM<span>HEALTHCARE</span>
+            </div>
+
+            <p>
+                Science-backed human healthcare formulations for better health and wellbeing.
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <h4>Products</h4>
+
+            <a href="#products">All Products</a>
+            <a href="#products">Sudesam Vita</a>
+            <a href="#products">Sudesical</a>
+           
+           
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <h4>Company</h4>
+
+            <a href="#about">About Us</a>
+            <a href="#">Certifications</a>
+            <a href="#">Distributor</a>
+            <a href="#contact">Contact</a>
+
+        </div>
+
+
+        <div class="footer-contact">
+
+            <h4>Contact</h4>
+
+            <p>
+             	CIN NO. <br>
+		U21002GJ2026PTC173885, <br>
+		Address  B/304, "SWEET SHUKRA SARGASAN,<br>
+		GANDHINAGAR. GUJARAT 382419
+            </p>
+
+            <a href="tel:+917285020211">
+                +91 7285020211
+            </a>
+
+            <a href="tel:+917285020211">
+                +91 7285020211
+            </a>
+
+            <a href="mailto: Sudesamhealthcare@gmail.com">
+                Sudesamhealthcare@gmail.com
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="copyright">
+        © 2026 SUDESAMHEALTHCARE, GANDHINAGAR AHMEDABAD.
+    </div>
+
+</footer>
+
+
+<!-- WHATSAPP -->
+<a
+    href="https://wa.me/917285020211"
+    class="whatsapp"
+    target="_blank">
+    WhatsApp
+</a>
+
+
+<!-- ENQUIRY MODAL -->
+<div class="modal" id="enquiryModal">
+
+    <div class="modal-box">
+
+        <button
+            class="close"
+            onclick="closeEnquiry()">
+            ×
+        </button>
+
+        <h2>Send an enquiry</h2>
+
+        <p>
+            A real person replies — usually within
+            a working day.
+        </p>
+
+        <form id="enquiryForm">
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Your name"
+                required>
+
+            <input
+                type="tel"
+                id="phone"
+                placeholder="Phone number"
+                required>
+
+            <input
+                type="text"
+                id="city"
+                placeholder="City / district">
+
+            <textarea
+                id="message"
+                placeholder="What do you need?"></textarea>
+
+            <button type="submit">
+                Send enquiry on WhatsApp
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
